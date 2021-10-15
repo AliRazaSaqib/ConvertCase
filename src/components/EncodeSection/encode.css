@@ -1,0 +1,47 @@
+/** @format */
+
+.holdsDivs {
+  display: flex;
+
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.enterForEncode {
+  width: 58%;
+}
+.result {
+  width: 40%;
+}
+
+.enterForEncode button {
+  outline: none;
+  border: none;
+  background-color: #c4c3c3;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.enterForEncode button:hover {
+  background-color: black;
+  color: whitesmoke;
+  transition: all 1s ease-out;
+  transform: scale(1.1);
+}
+.addborder {
+  border: 1px solid white;
+  padding: 8px;
+}
+.encodeButtons {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 1200px) {
+  .enterForEncode,
+  .result {
+    width: 100%;
+  }
+}
