@@ -45,6 +45,17 @@ export default function Footer(props) {
                   DecodeString
                 </a>
               </li>
+
+              <li>
+                <a
+                  onClick={props.click}
+                  className={` text-${
+                    props.mode === "light" ? "dark" : "light"
+                  }`}
+                >
+                  Developer Information
+                </a>
+              </li>
             </ul>
           </div>
 

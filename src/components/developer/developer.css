@@ -62,7 +62,6 @@
 .services {
   padding-bottom: 30px;
   text-align: center;
-  padding: 20px 0px;
 }
 .services .section-title h2 {
   color: #444;
@@ -144,4 +143,128 @@
 .set_margin {
   margin: auto;
   cursor: pointer;
+}
+
+/* css for new design */
+.modal-dialog {
+  width: 90% !important;
+}
+.modal-body {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.modal-body p {
+  text-align: justify;
+}
+.modal-body .dev_img {
+  width: 150px;
+}
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.social-network a.icoRss:hover {
+  background-color: #24292f;
+}
+.social-network a.icoFacebook:hover {
+  background-color: #3b5998;
+}
+.social-network a.icoTwitter:hover {
+  background-color: #33ccff;
+}
+.social-network a.icoGoogle:hover {
+  background-color: #bd3518;
+}
+.social-network a.icoVimeo:hover {
+  background-color: #0590b8;
+}
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+.social-network a.icoRss:hover i,
+.social-network a.icoFacebook:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i,
+.social-network a.icoVimeo:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+a.socialIcon:hover,
+.socialHoverClass {
+  color: #44bcdd;
+}
+.social-circle {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap;
+}
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #d3d3d3;
+}
+.social-circle li i {
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.social-circle i {
+  color: #fff;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.social_iocns {
+  padding: 12px !important;
+}
+.contact {
+  padding: 12px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: unset !important;
+  }
+}
+@media (max-width: 576px) {
+  .modal-body {
+    flex-direction: column;
+  }
+  .modal-title h4 {
+    font-size: 1rem !important;
+  }
+  .modal-dialog {
+    width: unset !important;
+  }
 }

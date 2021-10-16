@@ -7,10 +7,11 @@ import "./App.css";
 import Alert from "./components/alert/Alert";
 import Encode from "./components/EncodeSection/Encode";
 import Decode from "./components/EncodeSection/Decode";
-import DeveloperInfo from "./components/developer/DeveloperInfo";
+import DeveloperProfile from "./components/developer/DeveloperProfile";
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
+  const [show, setShow] = useState(false);
 
   const showAlert = (message, type) => {
     setAlert({
@@ -32,6 +33,13 @@ function App() {
       showAlert("Light mode has been enabled", "Success");
     }
   };
+
+  const handleClick = () => {
+    setShow(true);
+  };
+  const handleClose = () => {
+    setShow(false);
+  };
   return (
     <div className="main-wraper">
       <Navbar mode={mode} toogleTheme={toogleTheme} />
@@ -47,9 +55,9 @@ function App() {
         <Decode showAlert={showAlert} mode={mode} />
       </div>
       <div className="footer-section">
-        <Footer mode={mode} />
+        <Footer mode={mode} click={handleClick} />
       </div>
-      <DeveloperInfo />
+      <DeveloperProfile show={show} close={handleClose} />
     </div>
   );
 }

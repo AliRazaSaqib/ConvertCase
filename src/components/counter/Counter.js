@@ -44,18 +44,22 @@ export default function Counter(props) {
 
   //handleTitleCase text
   const handleTitleCase = () => {
-    if (text.length === 0) {
-      props.showAlert("First enter some text", "Warning:");
-    } else {
-      let titleCase = text
-        .split(" ")
-        .map(
-          (str) =>
-            str[0].toLocaleUpperCase() + str.substr(1).toLocaleLowerCase()
-        )
-        .join(" ");
+    try {
+      if (text.length === 0) {
+        props.showAlert("First enter some text", "Warning:");
+      } else {
+        let titleCase = text
+          .split(" ")
+          .map(
+            (str) =>
+              str[0].toLocaleUpperCase() + str.substr(1).toLocaleLowerCase()
+          )
+          .join(" ");
 
-      setText(titleCase);
+        setText(titleCase);
+      }
+    } catch (exception) {
+      props.showAlert("Only text accepted", "Warning:");
     }
   };
 
@@ -131,7 +135,21 @@ export default function Counter(props) {
   };
 
   return (
-    <div ref={ref} className="counterMainDiv" id="counter">
+    <div
+      ref={ref}
+      className={` text-${
+        props.mode === "light" ? "dark" : "muted"
+      }  counterMainDiv`}
+      id="counter"
+    >
+      <h3>
+        Enter <small>Text</small> ForConversion
+      </h3>
+
+      <p>
+        This application will helps you convert your text in upperCase,
+        lowerCase, titleCase and some other options are also available.
+      </p>
       <div
         className="counter-main-div"
         onClick={() => setclickOutside((oldState) => !oldState)}

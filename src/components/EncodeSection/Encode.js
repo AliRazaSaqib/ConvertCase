@@ -25,7 +25,7 @@ export default function Encode(props) {
   };
   return (
     <div
-      className={`text-${props.mode === "light" ? "dark" : "light"} addborder`}
+      className={`text-${props.mode === "light" ? "dark" : "muted"} addborder`}
       id="encode"
     >
       <h3>
